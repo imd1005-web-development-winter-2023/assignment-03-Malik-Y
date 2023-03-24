@@ -1,55 +1,187 @@
-/*
-  CSS File
-*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #bfc0c1;
+    color: #424242;
+  }
+  
+  header {
+    padding: 2px 80px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  header h1 {
+    font-size: 40px;
+    font-weight: 300;
+    color: #424242;
+    margin-bottom: 16px;
+  }
+  
+  #new-task-form {
+    display: flex;
+  }
+  
+  input,
+  button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+  }
+  
+  #input-task {
+    flex: 1 1 0%;
+    background-color: #424242;
+    padding: 16px;
+    border-radius: 16px;
+    margin-right: 16px;
+    font-size: 16px;
+    
+  }
+  
+  #new-task {
+    color: #FFEB3B;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.4s;
+    left: 60%;
+  }
+  
+  #new-task:hover {
+    opacity: 0.8;
+  }
+  
+  #new-task:active {
+    opacity: 0.6;
+  }
+  
+  main {
+    flex: 1 1 0%;
+    padding: 32px 16px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .tasklist {
+    padding: 16px;
+  }
+  
+  .tasklist h2 {
+    font-size: 24px;
+    font-weight: 300;
+    color: #eb0000;
+    margin-bottom: 16px;
+  }
+  
+  #tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: #424242;
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
 
-/*
- VARIABLES
-*/
-:root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
+  #tasks .task:hover {
+    background-color: #DDDDDD;
+    cursor: pointer;
+  }
+  #tasks .task .content {
+    flex: 1 1 0%;
+  }
+  .container
+  {
+     width: 700px;
+     height: relative;
+     margin: 100px auto;
+     background: #ffffff;
+     position: relative;
+     border-radius: 16px;
+     box-shadow: #000000;
+  }
+  #tasks .task .content .text {
+    color: #bfc0c1;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+  }
+  
+  #tasks .task .content .text:not(:read-only) {
+    color: #FFEB3B;
+  }
+  
+  #tasks .task .actions {
+    display: flex;
+    margin: 0 -8px;
+  }
+  
+  .task .actions button {
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+  }
+  
+  .task .actions button:hover {
+    opacity: 0.8;
+  }
+  
+  .task .actions .button:active {
+    opacity: 0.6;
+  }
+  
+  .task .actions .edit {
+    color: #FFEB3B;
+  }
+  
+  .task .actions .delete {
+    color: red;
+  }
+  .background
+  {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(100, 100, 100, 0)
+      ),
+      url(image/background.jpeg);
+    background-repeat:repeat-x;
+    background-size: cover;
+    background-position: center;
+    height: relative;
+  }
 
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
+  .task.completed .content input {
+    text-decoration:line-through;
+    color: rgb(0, 255, 81);
+}
+#empty-state {
+  font-size: 100%;
+  font-style: normal;
+  text-align: center;
+  color: #a9a9a9;
+  padding-left: 30%;
+  padding-top: 10px;
 }
 
-/*
-  PAGE / BODY
-*/
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
-}
-
-main {
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/*
-  Screen reader text utility class
-*/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+.logo {
+  padding-left: 0px;
+  margin-right: auto;
+  width: 6%;
 }
