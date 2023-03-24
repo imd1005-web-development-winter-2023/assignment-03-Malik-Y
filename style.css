@@ -160,7 +160,7 @@
         rgba(0, 0, 0, 0.6),
         rgba(100, 100, 100, 0)
       ),
-      url(image/background.jpeg);
+      url(images/background.jpeg);
     background-repeat:repeat-x;
     background-size: cover;
     background-position: center;
