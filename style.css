@@ -96,7 +96,7 @@
 
   #tasks .task:hover {
     background-color: #DDDDDD;
-    cursor: pointer;
+    cursor: pointer; 
   }
   #tasks .task .content {
     flex: 1 1 0%;
