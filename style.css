@@ -104,12 +104,10 @@
   .container
   {
      width: 700px;
-     height: relative;
      margin: 100px auto;
      background: #ffffff;
      position: relative;
      border-radius: 16px;
-     box-shadow: #000000;
   }
   #tasks .task .content .text {
     color: #bfc0c1;
@@ -164,7 +162,6 @@
     background-repeat:repeat-x;
     background-size: cover;
     background-position: center;
-    height: relative;
   }
 
   .task.completed .content input {
